@@ -2,7 +2,7 @@
 {% load static%}
 {%block content%}
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#"><img class = 'logo' src="{% static 'ncert/img/logo.png' %}"></a>
+  
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -18,7 +18,7 @@
       </li> -->
       
       <li class="nav-item disable">
-        <a class="nav-link" href=""><h1>Welcome to LMS</h1><span class="sr-only">(current)</span></a>
+        <a class="nav-link" href=""><h1>Achievement Survey</h1><span class="sr-only">(current)</span></a>
       </li>
        
 
@@ -35,19 +35,56 @@
       </li> -->
       
        <li class="nav-item active">
-        <a class="nav-link" href="{% url 'login' %}">NCERT<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="{% url 'login' %}">MS-DVET<span class="sr-only">(current)</span></a>
       </li>
+       
+       
        <li class="nav-item active">
-        <a class="nav-link" href="{% url 'login' %}">STATE<span class="sr-only">(current)</span></a>
-      </li>
-       <li class="nav-item active">
-        <a class="nav-link" href="{% url 'login' %}">DISTRICT<span class="sr-only">(current)</span></a>
-      </li>
-       <li class="nav-item active">
-        <a class="nav-link" href="{% url 'login' %}">SCHOOL<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="{% url 'login' %}">INSTITUTION<span class="sr-only">(current)</span></a>
       </li>
        <li class="nav-item active">
         <a class="nav-link" href="{% url 'login' %}">TEACHER<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <select onChange="window.location.href=this.value">
+          <option value="{% url 'login' %}">All</option>
+          <option value="{% url 'login' %}">Ahmednagar</option>
+          <option value="{% url 'login' %}">Akola</option>
+          <option value="{% url 'login' %}">Amravati</option>
+          <option value="{% url 'login' %}">Aurangabad</option>
+          <option value="{% url 'login' %}">Beed</option>
+          <option value="{% url 'login' %}">Bhandara</option>
+          <option value="{% url 'login' %}">Buldhana</option>
+          <option value="{% url 'login' %}">Chandrapur</option>
+          <option value="{% url 'login' %}">Dhule</option>
+          <option value="{% url 'login' %}">Gadchiroli</option>
+          <option value="{% url 'login' %}">Gondia</option>
+          <option value="{% url 'login' %}">Hingoli</option>
+          <option value="{% url 'login' %}">Jalgaon</option>
+          <option value="{% url 'login' %}">Jalna</option> 
+          <option value="{% url 'login' %}">Kolhapur</option>
+          <option value="{% url 'login' %}">Latur</option>
+          <option value="{% url 'login' %}">Mumbai City</option>
+          <option value="{% url 'login' %}">Mumbai Suburban</option>
+          <option value="{% url 'login' %}">Nagpur</option>
+          <option value="{% url 'login' %}">Nanded</option>
+          <option value="{% url 'login' %}">Nandurbar</option>
+          <option value="{% url 'login' %}">Nashik</option>
+          <option value="{% url 'login' %}">Osmanabad</option>
+          <option value="{% url 'login' %}">Palghar</option>
+          <option value="{% url 'login' %}">Parbhani</option>
+          <option value="{% url 'login' %}">Pune</option>
+          <option value="{% url 'login' %}">Raigad</option>
+          <option value="{% url 'login' %}">Ratnagiri</option>
+          <option value="{% url 'login' %}">Sangli</option>
+          <option value="{% url 'login' %}">Satara</option>
+          <option value="{% url 'login' %}">Sindhudurg</option>
+          <option value="{% url 'login' %}">Solapur</option>
+          <option value="{% url 'login' %}">Thane</option>
+          <option value="{% url 'login' %}">Wardha</option>
+          <option value="{% url 'login' %}">Yavatmal</option>
+      </select>
+      
       </li>
 
    </ul>

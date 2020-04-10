@@ -15,37 +15,42 @@
       {% if user.is_authenticated%}
 
       <li class="nav-item active">
-        <a class="nav-link" href="{% url 'stateuser' %}">Dashboard<span class="sr-only">(current)</span></a>
-      </li>
-
-
-      <li class="nav-item active">
-        <a class="nav-link" href="{% url 'pr'%}">Progress Report<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="">Dashboard <span class="sr-only">(current)</span></a>
       </li>
 
       <li class="nav-item active">
-        <a class="nav-link" href="{% url 'dm' %}">District Management<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="{% url 'lowestlo' %}">Lowest Learning Outcome <span class="sr-only">(current)</span></a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'activityP' %}">Activity Plan <span class="sr-only">(current)</span></a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'slo' %}">Student Learning Outcome <span class="sr-only">(current)</span></a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" href="{%url 'uploadEvi' %}">Upload Evidences <span class="sr-only">(current)</span></a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" href="{%url 'pr' %}">Progress Report <span class="sr-only">(current)</span></a>
       </li>
 
        <li class="nav-item active">
-        <a class="nav-link" href="{% url 'rm' %}">Resource Management<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="{%url 'vcar'%}">View Content and Resource <span class="sr-only">(current)</span></a>
       </li>
 
       <li class="nav-item active">
-        <a class="nav-link" href="{% url 'statesas' %}">Support and Supervision<span class="sr-only">(current)</span></a>
-      </li>
-
-      <!-- <li class="nav-item active">
-        <a class="nav-link" href="{% url 'iau' %}">Information and Update<span class="sr-only">(current)</span></a>
-      </li> -->
-
-      <li class="nav-item active">
-        <a class="nav-link" href="{% url 'feed' %}">Feedback<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="">Feedback <span class="sr-only">(current)</span></a>
       </li>
 
       <li class="nav-item active">
         <a class="nav-link" href="{% url 'login' %}">Logout <span class="sr-only">(current)</span></a>
       </li>
+
+
       {% else %}
 
        <li class="nav-item active">
@@ -54,18 +59,14 @@
       {% endif %}
       
   </div>
-</nav>
-{% block state %}
-{% endblock state%}
-<link rel="stylesheet" type="text/css" href="{% static 'ncert/mycss/myblink.css' %}">
 
-{% if content == 'stateuser' %}
-      <div class="jumbotron jumbotron-fluid">
+
+</nav>
+<div class="jumbotron jumbotron-fluid">
   <div class="container">
     <h1 class="display-4">Dashboard</h1>
-    <p class="lead blink">You have received Mail</p>
+    <p class="lead">Email from NCERT</p>
   </div>
 </div>
-{% endif %}
 
 {%endblock%}
